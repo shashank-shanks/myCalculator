@@ -13,7 +13,7 @@
 @property (strong, nonatomic) NSDictionary* buttonDictionary;
 @property (strong,nonatomic) NSString* expressionString;
 
-@property (nonatomic,readwrite) NSInteger cursorPosition;
+@property (nonatomic,readwrite) NSInteger cursorPosition; // unused. Useful for enhanced functionality in future
 
 @end
 
@@ -23,7 +23,7 @@
 {
     [super viewDidLoad];
     
- 
+ // setup relation Between The buttons and their respective functions
     NSMutableDictionary* dict = [NSMutableDictionary dictionary];
     
     [dict setObject:@"1" forKey:@"1001"];
@@ -51,6 +51,7 @@
 
 -(void)evaluateEnteredExpression:(NSString *) string
 {
+// Evaluates if the expression is valid. Else shows the error
     @try
     {
         
@@ -58,8 +59,6 @@
             NSPredicate * parsed = [NSPredicate predicateWithFormat:[NSString stringWithFormat:@"1.0 * %@ = 0", expression]];
             NSExpression * left = [(NSComparisonPredicate *)parsed leftExpression];
            id calculatedResult = [left expressionValueWithObject:nil context:nil];
-        
-                //NSLog(@"%@",[expression expressionValueWithObject:nil context:nil]);
         
         self.resultView.text = [NSString stringWithFormat:@"%@", calculatedResult];
         self.expressionString = @"";
@@ -76,10 +75,6 @@
         }
         
     }
-    @finally
-    {
-        
-    }
 }
 
 
@@ -89,6 +84,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+// Modifies
 - (IBAction)numberTapped:(UIButton*)button
 {
     self.inputView.text = [self.expressionString stringByAppendingString:[NSString stringWithFormat:@"%@",self.buttonDictionary[[NSString stringWithFormat:@"%@",@(button.tag
@@ -104,6 +100,8 @@
     if (self.expressionString.length>1) {
         
     self.expressionString = [self.expressionString substringToIndex:self.expressionString.length-1];
+        self.inputView.text = self.expressionString;
+        
     }
     else
     {
