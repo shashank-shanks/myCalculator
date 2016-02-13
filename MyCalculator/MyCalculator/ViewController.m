@@ -53,10 +53,15 @@
 {
     @try
     {
-        NSExpression *expression = [NSExpression expressionWithFormat:string];
-        NSLog(@"%@",[expression expressionValueWithObject:nil context:nil]);
         
-        self.resultView.text = [NSString stringWithFormat:@"%@", [expression expressionValueWithObject:nil context:nil]];
+        NSExpression *expression = [NSExpression expressionWithFormat:string];
+            NSPredicate * parsed = [NSPredicate predicateWithFormat:[NSString stringWithFormat:@"1.0 * %@ = 0", expression]];
+            NSExpression * left = [(NSComparisonPredicate *)parsed leftExpression];
+           id calculatedResult = [left expressionValueWithObject:nil context:nil];
+        
+                //NSLog(@"%@",[expression expressionValueWithObject:nil context:nil]);
+        
+        self.resultView.text = [NSString stringWithFormat:@"%@", calculatedResult];
         self.expressionString = @"";
         
     }
@@ -125,6 +130,5 @@
     self.inputView.text = @"0";
     self.expressionString = @"";
     self.resultView.text= @"";
-    
 }
 @end
