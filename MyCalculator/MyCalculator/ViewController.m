@@ -37,12 +37,15 @@
     [dict setObject:@"9" forKey:@"1009"];
     [dict setObject:@"0" forKey:@"1000"];
     [dict setObject:@"." forKey:@"999"];
-    
+    [dict setObject:@"/" forKey:@"1010"];
+    [dict setObject:@"*" forKey:@"1011"];
+    [dict setObject:@"+" forKey:@"1012"];
+    [dict setObject:@"-" forKey:@"1013"];
     
     
     self.buttonDictionary = dict;
     self.expressionString= @"";
-    
+    self.inputView.text =0;
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -52,13 +55,25 @@
     {
         NSExpression *expression = [NSExpression expressionWithFormat:string];
         NSLog(@"%@",[expression expressionValueWithObject:nil context:nil]);
+        
+        self.resultView.text = [NSString stringWithFormat:@"%@", [expression expressionValueWithObject:nil context:nil]];
+        self.expressionString = @"";
+        
     }
     @catch (NSException *exception)
     {
         NSLog(@"%@",exception);
         
+        if (exception.name == NSInvalidArgumentException) {
+            
+            self.resultView.text = @"Invalid Entry. Please Check the Syntax";
+            
+        }
+        
+        
     }
-    @finally {
+    @finally
+    {
         
     }
 }
@@ -72,22 +87,45 @@
 
 - (IBAction)numberTapped:(UIButton*)button
 {
-    //self.expressionString = [self.expressionString stringByAppendingString:[dict[[NSString stringWithFormat:@"%ld",(long)button.tag]]]];
+    self.inputView.text = [self.expressionString stringByAppendingString:[NSString stringWithFormat:@"%@",self.buttonDictionary[[NSString stringWithFormat:@"%@",@(button.tag
+                                                                                                                                )]]]];
+    
+    self.expressionString= self.inputView.text;
+    
     
 }
 
-- (IBAction)backSpaceTapped:(id)sender {
+- (IBAction)backSpaceTapped:(id)sender
+{
+    if (self.expressionString.length>1) {
+        
+    self.expressionString = [self.expressionString substringToIndex:self.expressionString.length-1];
+    }
+    else
+    {
+        self.expressionString = @"";
+        self.inputView.text = @"0";
+    }
 }
+
+#pragma Future Methods
 
 - (IBAction)backTapped:(id)sender {
 }
 
 - (IBAction)forwardTapped:(id)sender {
 }
+
+
 - (IBAction)solveTapped:(id)sender
 {
     [self evaluateEnteredExpression:self.expressionString];
 }
-- (IBAction)resetTapped:(id)sender {
+- (IBAction)resetTapped:(id)sender
+{
+    self.inputView.text = @"0";
+    self.expressionString = @"";
+    self.resultView.text= @"";
+    
 }
 @end
