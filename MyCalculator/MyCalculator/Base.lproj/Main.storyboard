@@ -169,8 +169,8 @@
                                     <action selector="numberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YYy-R2-343"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JbH-ZR-3cS">
-                                <rect key="frame" x="37" y="303" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JbH-ZR-3cS">
+                                <rect key="frame" x="32" y="303" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Ubi-B9-R2h"/>
                                 </constraints>
@@ -188,7 +188,7 @@
                                     <action selector="numberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3AR-tw-BuD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1012" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIR-hD-WHg">
+                            <button opaque="NO" tag="1012" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIR-hD-WHg">
                                 <rect key="frame" x="250" y="405" width="30" height="30"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <state key="normal" title="+"/>
@@ -196,7 +196,7 @@
                                     <action selector="numberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vSt-Xc-gwc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1011" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7A4-B8-F8h">
+                            <button opaque="NO" tag="1011" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7A4-B8-F8h">
                                 <rect key="frame" x="250" y="351" width="30" height="30"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <state key="normal" title="X"/>
@@ -204,7 +204,7 @@
                                     <action selector="numberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DKm-cW-SA7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1010" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srS-IG-mpa">
+                            <button opaque="NO" tag="1010" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srS-IG-mpa">
                                 <rect key="frame" x="250" y="303" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="69M-n9-mc4"/>
@@ -253,6 +253,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FBc-8j-MuJ" secondAttribute="bottom" constant="20" id="FVV-rC-8qb"/>
                             <constraint firstItem="brd-9E-10L" firstAttribute="height" secondItem="rsc-8M-KlP" secondAttribute="height" id="GIu-o5-yFr"/>
                             <constraint firstItem="5nb-5c-j5T" firstAttribute="height" secondItem="rsc-8M-KlP" secondAttribute="height" id="GVD-9c-sFk"/>
+                            <constraint firstItem="brd-9E-10L" firstAttribute="trailing" secondItem="srS-IG-mpa" secondAttribute="trailing" id="Gdf-9q-aQb"/>
                             <constraint firstItem="xIR-hD-WHg" firstAttribute="bottom" secondItem="e2k-xe-8Mb" secondAttribute="bottom" id="I9i-zH-URB"/>
                             <constraint firstItem="uhp-fx-5Z5" firstAttribute="leading" secondItem="rsc-8M-KlP" secondAttribute="leading" id="Ioh-eq-X7K"/>
                             <constraint firstItem="lLj-C0-yBC" firstAttribute="width" secondItem="rsc-8M-KlP" secondAttribute="width" id="IyA-Y2-bg7"/>
@@ -299,6 +300,7 @@
                             <constraint firstItem="5nb-5c-j5T" firstAttribute="bottom" secondItem="FBc-8j-MuJ" secondAttribute="bottom" id="knT-87-Uq9"/>
                             <constraint firstItem="FBc-8j-MuJ" firstAttribute="width" secondItem="rsc-8M-KlP" secondAttribute="width" id="lpu-YU-Yho"/>
                             <constraint firstItem="lLj-C0-yBC" firstAttribute="leading" secondItem="5nb-5c-j5T" secondAttribute="trailing" constant="47" id="mFi-IZ-m5i"/>
+                            <constraint firstItem="7A4-B8-F8h" firstAttribute="trailing" secondItem="srS-IG-mpa" secondAttribute="trailing" id="naD-aN-xz6"/>
                             <constraint firstItem="uhp-fx-5Z5" firstAttribute="width" secondItem="rsc-8M-KlP" secondAttribute="width" id="o4n-ck-Vcs"/>
                             <constraint firstItem="5nb-5c-j5T" firstAttribute="height" secondItem="FBc-8j-MuJ" secondAttribute="height" id="oPH-je-BWz"/>
                             <constraint firstItem="MjF-xc-3Le" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="okx-8M-ToJ"/>
@@ -308,6 +310,7 @@
                             <constraint firstItem="lLj-C0-yBC" firstAttribute="bottom" secondItem="FBc-8j-MuJ" secondAttribute="bottom" id="rbp-ij-Cbo"/>
                             <constraint firstItem="brd-9E-10L" firstAttribute="width" secondItem="rsc-8M-KlP" secondAttribute="width" id="rj7-bO-LgJ"/>
                             <constraint firstItem="20y-kf-nfJ" firstAttribute="leading" secondItem="rsc-8M-KlP" secondAttribute="leading" id="uNR-zI-hWD"/>
+                            <constraint firstItem="xIR-hD-WHg" firstAttribute="trailing" secondItem="srS-IG-mpa" secondAttribute="trailing" id="uji-ME-9S0"/>
                             <constraint firstItem="20y-kf-nfJ" firstAttribute="height" secondItem="rsc-8M-KlP" secondAttribute="height" id="wZE-Wg-KH3"/>
                             <constraint firstItem="MjF-xc-3Le" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="29" id="wed-MA-Li6"/>
                             <constraint firstItem="FBc-8j-MuJ" firstAttribute="height" secondItem="rsc-8M-KlP" secondAttribute="height" id="xLg-ul-EnG"/>

@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyCalculator/AppDelegate.m"
-            timestampString = "477031144.616495"
+            filePath = "MyCalculator/ViewController.m"
+            timestampString = "477037562.136094"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "-evaluateEnteredExpression:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

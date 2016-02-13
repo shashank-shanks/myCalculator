@@ -15,25 +15,8 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    NSString *string = @"sqrt(25)";
-    
-    @try {
-        NSExpression *expression = [NSExpression expressionWithFormat:string];
-        NSLog(@"%@",[expression expressionValueWithObject:nil context:nil]);
-    }
-    @catch (NSException *exception)
-    {
-        NSLog(@"%@",exception);
-        
-        
-    }
-    @finally {
-        
-    }
-
-   
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     // Override point for customization after application launch.
     return YES;
 }
